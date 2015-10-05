@@ -33,6 +33,6 @@ coverage report
 * Para ver el reporte en una presentación html
 
 ```
-coverage report
+coverage html
 ```
 > Abrir htmlcov/index.html
