@@ -8,9 +8,9 @@ from .models import Whatever
 class WhateverTest(TestCase):
 
     def create_whatever(self, title="only a test", body="yes, this is only a test"):
-        test_whatever = Whatever.objects.create(title=title, body=body, created_at=timezone.now())
+        return Whatever.objects.create(title=title, body=body, created_at=timezone.now())
 
     def test_whatever_creation(self):
         w = self.create_whatever()
         self.assertTrue(isinstance(w, Whatever))
-        self.assetEqual(w.__unicode__, w.title)
+        self.assertEqual(w.__unicode__(), w.title)
